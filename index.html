@@ -26,23 +26,23 @@
     <dialog class="book-modal">
         <h1>Enter Book Details</h1>
         <form action="#">
-            <div class="input-container">
-                <p>Title</p>
-                <input class="form-input" type="text" id="title" name="title" required>
+            <div class="input-group">
+                <div id="label"><p>Title</p></div>
+                <input class="form-input" type="text" name="title" id="title">
             </div>
-            <div class="input-container">
-                <p>Author</p>
-                <input class="form-input" type="text" id="author" name="author" required>
+            <div class="input-group">
+                <div id="label"><p>Author</p></div>
+                <input class="form-input" type="text" name="author" id="author">
             </div>
-            <div class="input-container">
-                <p>Pages</p>
-                <input class="form-input" type="number" id="pages" name="pages" required>
+            <div class="input-group">
+                <div id="label"><p>Pages</p></div>
+                <input class="form-input" type="number" name="pages" id="pages">
             </div>
-            <div class="radio-container">
-                <p>Have you read this before:</p>
-                <input type="radio" id="read" name="read" required>
+            <div class="input-group radio-group">
+                <div id="label"><p>Have you read this before: </p></div>
+                <input type="radio" name="read" id="read">
             </div>
-            <button class="btn close-btn">Close</button>
+            <button class="btn close-btn">Submit</button>
         </form>
     </dialog>
 
