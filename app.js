@@ -10,13 +10,10 @@ openModal.addEventListener('click', () => {
 
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let pages = Number(document.getElementById("pages").value);
     let read = document.getElementById("read").value;
-
-    console.log(title, author, pages, read);
 });
 
 closeModal.addEventListener('click', () => {
