@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/fav-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-brand"><img id="nav-logo" src="./assets/logo.svg" alt="logo"></div>
+        <div class="nav-buttons">
+            <button class="btn open-modal">Add Book</button>
+            <a href="#">
+                <div id="profile-btn">
+                    <img src="./assets/profile-icon.svg" alt="profile button">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <dialog class="book-modal">
+        <h1>Enter Book Details</h1>
+        <form action="#">
+            <div class="input-container">
+                <p>Title</p>
+                <input class="form-input" type="text" id="title" name="title" required>
+            </div>
+            <div class="input-container">
+                <p>Author</p>
+                <input class="form-input" type="text" id="author" name="author" required>
+            </div>
+            <div class="input-container">
+                <p>Pages</p>
+                <input class="form-input" type="number" id="pages" name="pages" required>
+            </div>
+            <div class="radio-container">
+                <p>Have you read this before:</p>
+                <input type="radio" id="read" name="read" required>
+            </div>
+            <button class="btn close-btn">Close</button>
+        </form>
+    </dialog>
+
+    <script src="app.js"></script>
+</body>
+</html>
