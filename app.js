@@ -40,16 +40,21 @@ bookForm.addEventListener('submit', (e) => {
 gridContainer.addEventListener('click', (event) => {
     const isBtn = event.target.nodeName === 'BUTTON';
 
-    if (isBtn) {
+    if (isBtn && event.target.className === 'btn info-reset') {
         const divId = event.target.parentElement.id;
         const card = document.getElementById(divId);
         const readInfo = card.getElementsByTagName('h2')[1];
+        console.log(event.target.className);
 
         if (readInfo.innerText === 'Read Before: No'){
             readInfo.innerText = 'Read Before: Yes';
         } else {
             readInfo.innerText = 'Read Before: No';
         }
+    } else if (isBtn && event.target.className === 'del-btn') {
+        const divId = event.target.parentElement.id;
+        const card = document.getElementById(divId);
+        card.remove()
     }
 })
 
@@ -71,6 +76,9 @@ function createBookCard(book) {
     card.setAttribute('class', 'child');
     card.setAttribute('id', book.title);
 
+    let delCard = document.createElement('button');
+    delCard.textContent = 'X';
+    delCard.setAttribute('class', 'del-btn');
     let header = document.createElement('h1');
     header.textContent = `${book.title}`;
     let vertDiv = document.createElement('div');
@@ -89,6 +97,7 @@ function createBookCard(book) {
     resetBtn.setAttribute('class', 'btn info-reset');
     resetBtn.textContent = 'Change Read';
 
+    card.appendChild(delCard);
     card.appendChild(header);
     card.appendChild(vertDiv);
     card.appendChild(authInfo);
